@@ -1,0 +1,1815 @@
+/* ===== HERO HEADER STYLES ===== */
+.hero-header {
+    background: linear-gradient(135deg, 
+        rgba(255, 182, 193, 0.9) 0%,
+        rgba(255, 218, 224, 0.95) 25%,
+        rgba(255, 240, 245, 0.9) 50%,
+        rgba(255, 218, 224, 0.95) 75%,
+        rgba(255, 182, 193, 0.9) 100%);
+    backdrop-filter: blur(15px);
+    border-radius: 0 0 50px 50px;
+    margin-bottom: 40px;
+    padding: 80px 20px !important;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(255, 105, 180, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(255, 215, 0, 0.1) 0%,
+        rgba(255, 182, 193, 0.05) 50%,
+        transparent 100%
+    );
+    animation: headerGlow 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.header-bg-effects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Floating Hearts */
+.floating-hearts .heart {
+    position: absolute;
+    font-size: 1.5rem;
+    animation: floatHeart 6s ease-in-out infinite;
+}
+
+.heart-1 { top: 20%; left: 10%; animation-delay: 0s; }
+.heart-2 { top: 60%; left: 85%; animation-delay: 1.5s; }
+.heart-3 { top: 80%; left: 15%; animation-delay: 3s; }
+.heart-4 { top: 30%; left: 90%; animation-delay: 4.5s; }
+
+@keyframes floatHeart {
+    0%, 100% { 
+        transform: translateY(0) rotate(0deg) scale(1);
+        opacity: 0.7;
+    }
+    50% { 
+        transform: translateY(-20px) rotate(10deg) scale(1.2);
+        opacity: 1;
+    }
+}
+
+/* Floating Sparkles */
+.floating-sparkles .sparkle {
+    position: absolute;
+    font-size: 1.2rem;
+    animation: sparkleFloat 4s ease-in-out infinite;
+}
+
+.sparkle-1 { top: 15%; right: 20%; animation-delay: 0s; }
+.sparkle-2 { top: 70%; right: 80%; animation-delay: 1s; }
+.sparkle-3 { top: 40%; left: 25%; animation-delay: 2s; }
+.sparkle-4 { top: 85%; right: 30%; animation-delay: 3s; }
+
+@keyframes sparkleFloat {
+    0%, 100% { 
+        transform: scale(0.8) rotate(0deg);
+        opacity: 0.6;
+    }
+    50% { 
+        transform: scale(1.3) rotate(180deg);
+        opacity: 1;
+    }
+}
+
+/* Title Container */
+.title-container {
+    position: relative;
+    z-index: 10;
+}
+
+.party-icons {
+    margin-bottom: 20px;
+}
+
+.party-icon {
+    font-size: 3rem;
+    animation: partyBounce 2s ease-in-out infinite;
+    display: inline-block;
+    margin: 0 40px;
+}
+
+.party-icon.left {
+    animation-delay: 0s;
+}
+
+.party-icon.right {
+    animation-delay: 0.5s;
+}
+
+@keyframes partyBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    40% {
+        transform: translateY(-25px) rotate(-10deg);
+    }
+    60% {
+        transform: translateY(-15px) rotate(10deg);
+    }
+}
+
+/* Main Birthday Title */
+.main-birthday-title {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    margin: 30px 0;
+    position: relative;
+}
+
+.title-line-1, .title-line-2 {
+    display: block;
+    background: linear-gradient(45deg, 
+        #ff1493 0%, 
+        #ff69b4 25%, 
+        #ff1493 50%, 
+        #dc143c 75%, 
+        #ff69b4 100%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 
+        2px 2px 0px rgba(220, 20, 60, 0.8),
+        4px 4px 0px rgba(220, 20, 60, 0.6),
+        6px 6px 0px rgba(220, 20, 60, 0.4);
+    animation: titleShine 3s ease-in-out infinite;
+    letter-spacing: 3px;
+}
+
+.title-line-1 {
+    font-size: 4.5rem;
+    margin-bottom: -10px;
+}
+
+.title-line-2 {
+    font-size: 5rem;
+    font-weight: 800;
+}
+
+@keyframes titleShine {
+    0%, 100% { 
+        background-position: 0% 50%;
+        transform: scale(1);
+    }
+    50% { 
+        background-position: 100% 50%;
+        transform: scale(1.02);
+    }
+}
+
+/* Name Container */
+.name-container {
+    margin: 40px 0;
+}
+
+.name-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cake-icon {
+    font-size: 2.5rem;
+    animation: cakeRotate 3s ease-in-out infinite;
+}
+
+.birthday-name {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, 
+        #1e90ff 0%, 
+        #00bfff 25%, 
+        #87ceeb 50%, 
+        #4169e1 75%, 
+        #6495ed 100%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 
+        0 0 10px rgba(30, 144, 255, 0.8),
+        0 0 20px rgba(30, 144, 255, 0.6),
+        0 0 30px rgba(30, 144, 255, 0.4),
+        2px 2px 0px rgba(65, 105, 225, 0.8),
+        4px 4px 0px rgba(65, 105, 225, 0.6);
+    animation: nameGlow 2.5s ease-in-out infinite;
+    letter-spacing: 4px;
+    position: relative;
+    margin: 0;
+    transform: perspective(800px) rotateX(10deg);
+    filter: drop-shadow(0 15px 25px rgba(30, 144, 255, 0.4));
+}
+
+@keyframes nameGlow {
+    0%, 100% { 
+        background-position: 0% 50%;
+        text-shadow: 
+            0 0 10px rgba(30, 144, 255, 0.8),
+            0 0 20px rgba(30, 144, 255, 0.6),
+            0 0 30px rgba(30, 144, 255, 0.4),
+            2px 2px 0px rgba(65, 105, 225, 0.8);
+        transform: perspective(800px) rotateX(10deg) scale(1);
+    }
+    50% { 
+        background-position: 100% 50%;
+        text-shadow: 
+            0 0 20px rgba(30, 144, 255, 1),
+            0 0 40px rgba(30, 144, 255, 0.8),
+            0 0 60px rgba(30, 144, 255, 0.6),
+            2px 2px 0px rgba(65, 105, 225, 1);
+        transform: perspective(800px) rotateX(10deg) scale(1.05);
+    }
+}
+
+@keyframes cakeRotate {
+    0%, 100% { 
+        transform: rotate(0deg) scale(1);
+    }
+    25% { 
+        transform: rotate(-10deg) scale(1.1);
+    }
+    75% { 
+        transform: rotate(10deg) scale(1.1);
+    }
+}
+
+/* Celebration Icons */
+.celebration-icons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.celeb-icon {
+    font-size: 2.5rem;
+    animation: celebFloat 3s ease-in-out infinite;
+    display: inline-block;
+}
+
+.celeb-icon:nth-child(1) { animation-delay: 0s; }
+.celeb-icon:nth-child(2) { animation-delay: 0.3s; }
+.celeb-icon:nth-child(3) { animation-delay: 0.6s; }
+.celeb-icon:nth-child(4) { animation-delay: 0.9s; }
+.celeb-icon:nth-child(5) { animation-delay: 1.2s; }
+
+@keyframes celebFloat {
+    0%, 100% { 
+        transform: translateY(0) rotate(0deg);
+    }
+    33% { 
+        transform: translateY(-15px) rotate(10deg);
+    }
+    66% { 
+        transform: translateY(-5px) rotate(-5deg);
+    }
+}
+
+@keyframes headerGlow {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+/* Hover Effects */
+.main-birthday-title:hover .title-line-1,
+.main-birthday-title:hover .title-line-2 {
+    animation-duration: 1s;
+}
+
+.birthday-name:hover {
+    animation-duration: 1s;
+    transform: perspective(800px) rotateX(10deg) scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-header {
+        padding: 60px 15px !important;
+        border-radius: 0 0 30px 30px;
+    }
+    
+    .party-icon {
+        font-size: 2rem;
+        margin: 0 20px;
+    }
+    
+    .title-line-1 {
+        font-size: 3rem;
+    }
+    
+    .title-line-2 {
+        font-size: 3.5rem;
+    }
+    
+    .birthday-name {
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+    
+    .cake-icon {
+        font-size: 2rem;
+    }
+    
+    .name-decoration {
+        gap: 15px;
+    }
+    
+    .celebration-icons {
+        gap: 20px;
+    }
+    
+    .celeb-icon {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-header {
+        padding: 40px 10px !important;
+    }
+    
+    .party-icon {
+        font-size: 1.5rem;
+        margin: 0 15px;
+    }
+    
+    .title-line-1 {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+    
+    .title-line-2 {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+    
+    .birthday-name {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+    
+    .cake-icon {
+        font-size: 1.5rem;
+    }
+    
+    .name-decoration {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .celebration-icons {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    
+    .celeb-icon {
+        font-size: 1.8rem;
+    }
+    
+    .floating-hearts .heart,
+    .floating-sparkles .sparkle {
+        font-size: 1rem;
+    }
+}
+
+/* Extra animations */
+@keyframes rainbow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+.hero-header:hover {
+    animation: rainbow 3s linear infinite;
+}
+/* Welcome Modal Styles */
+.welcome-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    animation: modalFadeIn 0.5s ease-out;
+}
+
+.welcome-modal-content {
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.95) 0%, 
+        rgba(255, 182, 193, 0.95) 100%);
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-modal-content::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, 
+        transparent 0%, 
+        rgba(255, 215, 0, 0.1) 25%, 
+        transparent 50%, 
+        rgba(255, 105, 180, 0.1) 75%, 
+        transparent 100%);
+    animation: shimmer 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.welcome-animation {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.birthday-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: bounceIcon 2s ease-in-out infinite;
+}
+
+.musical-notes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.note {
+    position: absolute;
+    font-size: 1.5rem;
+    color: var(--primary-pink);
+    animation: floatNote 3s ease-in-out infinite;
+}
+
+.note-1 {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.note-2 {
+    top: 30%;
+    right: 15%;
+    animation-delay: 0.5s;
+}
+
+.note-3 {
+    bottom: 30%;
+    left: 20%;
+    animation-delay: 1s;
+}
+
+.note-4 {
+    bottom: 20%;
+    right: 25%;
+    animation-delay: 1.5s;
+}
+
+.welcome-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-pink);
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.welcome-text {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.welcome-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-play-music {
+    background: linear-gradient(135deg, var(--primary-pink), var(--secondary-color));
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-play-music::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.5s;
+}
+
+.btn-play-music:hover::before {
+    left: 100%;
+}
+
+.btn-play-music:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.btn-skip-music {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid var(--primary-pink);
+    color: var(--primary-pink);
+    padding: 15px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-skip-music:hover {
+    background: var(--primary-pink);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        transform: translateX(-100%) translateY(-100%) rotate(0deg);
+    }
+    50% {
+        transform: translateX(0%) translateY(0%) rotate(180deg);
+    }
+}
+
+@keyframes bounceIcon {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes floatNote {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+        opacity: 1;
+    }
+}
+
+.welcome-modal.hidden {
+    animation: modalFadeOut 0.5s ease-in forwards;
+}
+
+@keyframes modalFadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .welcome-modal-content {
+        padding: 30px 20px;
+    }
+    
+    .welcome-title {
+        font-size: 1.8rem;
+    }
+    
+    .welcome-text {
+        font-size: 1rem;
+    }
+    
+    .welcome-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-play-music,
+    .btn-skip-music {
+        width: 250px;
+    }
+}
+/* CSS Variables for easy customization */
+:root {
+    --primary-color: #ff69b4;
+    --secondary-color: #87ceeb;
+    --accent-color: #ffd700;
+    --background-light: #fff5f8;
+    --background-dark: #1a1a2e;
+    --text-light: #333;
+    --text-dark: #fff;
+    --card-bg-light: rgba(255, 255, 255, 0.9);
+    --card-bg-dark: rgba(40, 40, 60, 0.9);
+}
+
+/* Dark mode styles */
+[data-theme="dark"] {
+    --background-light: var(--background-dark);
+    --text-light: var(--text-dark);
+    --card-bg-light: var(--card-bg-dark);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: var(--text-light);
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] body {
+    background: linear-gradient(135deg, #2d1b69 0%, #11998e 50%, #38ef7d 100%);
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Music Control */
+.music-control {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.music-control button {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background Animations */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.floating-balloons .balloon {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 6s ease-in-out infinite;
+}
+
+.balloon-1 { left: 10%; animation-delay: 0s; color: var(--primary-color); }
+.balloon-2 { left: 25%; animation-delay: 1s; color: var(--secondary-color); }
+.balloon-3 { left: 50%; animation-delay: 2s; color: var(--accent-color); }
+.balloon-4 { left: 75%; animation-delay: 3s; color: var(--primary-color); }
+.balloon-5 { left: 90%; animation-delay: 4s; color: var(--secondary-color); }
+
+@keyframes float {
+    0%, 100% { transform: translateY(100vh) rotate(0deg); }
+    50% { transform: translateY(-100px) rotate(180deg); }
+}
+
+.stars .star {
+    position: absolute;
+    font-size: 1rem;
+    animation: twinkle 2s ease-in-out infinite alternate;
+}
+
+.star-1 { top: 10%; left: 15%; animation-delay: 0s; }
+.star-2 { top: 20%; right: 20%; animation-delay: 0.5s; }
+.star-3 { top: 60%; left: 10%; animation-delay: 1s; }
+.star-4 { top: 80%; right: 15%; animation-delay: 1.5s; }
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Confetti Canvas */
+#confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+}
+
+/* Main Container */
+.main-container {
+    position: relative;
+    z-index: 1;
+    padding: 20px 0;
+}
+
+/* Header Styles */
+/* Header Styles - Cải thiện */
+.birthday-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4.5rem; /* Tăng từ 3.5rem */
+    font-weight: 700;
+    color: transparent;
+    background: linear-gradient(45deg, 
+        #ff69b4 0%, 
+        #ff1493 25%, 
+        #dc143c 50%, 
+        #ff69b4 75%, 
+        #ff1493 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 
+        2px 2px 4px rgba(0,0,0,0.3),
+        0 0 10px rgba(255, 105, 180, 0.5),
+        0 0 20px rgba(255, 105, 180, 0.3);
+    margin-bottom: 10px;
+    animation: titleGlow 3s ease-in-out infinite, textShine 4s linear infinite;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.birthday-title::before {
+    content: '✨';
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    animation: sparkleLeft 2s ease-in-out infinite;
+}
+
+.birthday-title::after {
+    content: '✨';
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    animation: sparkleRight 2s ease-in-out infinite;
+}
+
+.name-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem; /* Tăng từ 2.5rem */
+    font-weight: 700;
+    background: linear-gradient(45deg, 
+        #00bfff 0%, 
+        #1e90ff 25%, 
+        #4169e1 50%, 
+        #6495ed 75%, 
+        #87ceeb 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 
+        2px 2px 6px rgba(0,0,0,0.4),
+        0 0 15px rgba(30, 144, 255, 0.6),
+        0 0 30px rgba(30, 144, 255, 0.4),
+        0 0 45px rgba(30, 144, 255, 0.2);
+    margin-bottom: 20px;
+    animation: nameGlow 2.5s ease-in-out infinite, nameShine 3s linear infinite;
+    letter-spacing: 3px;
+    position: relative;
+    transform: perspective(500px) rotateX(15deg);
+    filter: drop-shadow(0 10px 20px rgba(30, 144, 255, 0.3));
+}
+
+/* Thêm hiệu ứng 3D cho tên */
+.name-title::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: -1;
+    background: linear-gradient(45deg, 
+        rgba(30, 144, 255, 0.3) 0%, 
+        rgba(65, 105, 225, 0.3) 50%, 
+        rgba(135, 206, 235, 0.3) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: blur(1px);
+}
+
+.birthday-emoji {
+    font-size: 4rem; /* Tăng từ 3rem */
+    animation: bounce 2s ease-in-out infinite, emojiRotate 4s linear infinite;
+    margin: 20px 0;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+}
+
+/* Animations mới */
+@keyframes titleGlow {
+    0%, 100% { 
+        text-shadow: 
+            2px 2px 4px rgba(0,0,0,0.3),
+            0 0 10px rgba(255, 105, 180, 0.5),
+            0 0 20px rgba(255, 105, 180, 0.3);
+    }
+    50% { 
+        text-shadow: 
+            2px 2px 4px rgba(0,0,0,0.3),
+            0 0 20px rgba(255, 105, 180, 0.8),
+            0 0 40px rgba(255, 105, 180, 0.6),
+            0 0 60px rgba(255, 105, 180, 0.4);
+    }
+}
+
+@keyframes nameGlow {
+    0%, 100% { 
+        text-shadow: 
+            2px 2px 6px rgba(0,0,0,0.4),
+            0 0 15px rgba(30, 144, 255, 0.6),
+            0 0 30px rgba(30, 144, 255, 0.4);
+        transform: perspective(500px) rotateX(15deg) scale(1);
+    }
+    50% { 
+        text-shadow: 
+            2px 2px 6px rgba(0,0,0,0.4),
+            0 0 25px rgba(30, 144, 255, 0.9),
+            0 0 50px rgba(30, 144, 255, 0.7),
+            0 0 75px rgba(30, 144, 255, 0.5);
+        transform: perspective(500px) rotateX(15deg) scale(1.05);
+    }
+}
+
+@keyframes textShine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes nameShine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes sparkleLeft {
+    0%, 100% { 
+        transform: translateY(-50%) scale(1) rotate(0deg);
+        opacity: 0.8;
+    }
+    50% { 
+        transform: translateY(-50%) scale(1.3) rotate(180deg);
+        opacity: 1;
+    }
+}
+
+@keyframes sparkleRight {
+    0%, 100% { 
+        transform: translateY(-50%) scale(1) rotate(0deg);
+        opacity: 0.8;
+    }
+    50% { 
+        transform: translateY(-50%) scale(1.3) rotate(-180deg);
+        opacity: 1;
+    }
+}
+
+@keyframes emojiRotate {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Header container improvements */
+header {
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 182, 193, 0.2) 50%,
+        rgba(255, 255, 255, 0.1) 100%);
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 50px 50px;
+    margin-bottom: 30px;
+    padding: 60px 20px !important;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle,
+        rgba(255, 215, 0, 0.1) 0%,
+        transparent 50%
+    );
+    animation: headerShimmer 6s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes headerShimmer {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive cho header */
+@media (max-width: 768px) {
+    .birthday-title {
+        font-size: 3rem;
+        letter-spacing: 1px;
+    }
+    
+    .birthday-title::before,
+    .birthday-title::after {
+        font-size: 1.5rem;
+        left: -40px;
+        right: -40px;
+    }
+    
+    .name-title {
+        font-size: 2.8rem;
+        letter-spacing: 2px;
+    }
+    
+    .birthday-emoji {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .birthday-title {
+        font-size: 2.5rem;
+        letter-spacing: 0px;
+    }
+    
+    .birthday-title::before,
+    .birthday-title::after {
+        display: none; /* Ẩn sparkles trên mobile nhỏ */
+    }
+    
+    .name-title {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+    
+    .birthday-emoji {
+        font-size: 2.5rem;
+    }
+    
+    header {
+        padding: 40px 15px !important;
+        border-radius: 0 0 30px 30px;
+    }
+}
+
+/* Thêm hiệu ứng hover cho header */
+.birthday-title:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.name-title:hover {
+    transform: perspective(500px) rotateX(15deg) scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Thêm particles bay xung quanh header */
+.header-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: radial-gradient(circle, #ffd700, #ff69b4);
+    border-radius: 50%;
+    animation: floatParticle 8s linear infinite;
+}
+
+.particle:nth-child(odd) {
+    background: radial-gradient(circle, #87ceeb, #1e90ff);
+}
+
+@keyframes floatParticle {
+    0% {
+        transform: translateY(100vh) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) translateX(100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+/* Animation Classes */
+.animate-title {
+    animation: slideInDown 1s ease-out;
+}
+
+.animate-name {
+    animation: slideInUp 1s ease-out 0.5s both;
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Card Styles */
+.card {
+    background: var(--card-bg-light);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* Countdown Styles */
+.countdown-display {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.time-unit {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 15px;
+    color: white;
+    min-width: 80px;
+}
+
+.time-unit span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.time-unit label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.birthday-message {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Cake Styles */
+.cake-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.cake {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.cake-layer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+.layer-1 {
+    bottom: 0;
+    width: 180px;
+    height: 60px;
+    background: linear-gradient(45deg, #8B4513, #D2691E);
+}
+
+.layer-2 {
+    bottom: 50px;
+    width: 140px;
+    height: 50px;
+    background: linear-gradient(45deg, #FFB6C1, #FF69B4);
+}
+
+.layer-3 {
+    bottom: 90px;
+    width: 100px;
+    height: 40px;
+    background: linear-gradient(45deg, #98FB98, #90EE90);
+}
+
+/* Cải thiện Candle và Flame Styles */
+.candles {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 25px;
+}
+
+.candle {
+    width: 12px; /* Tăng từ 8px */
+    height: 35px; /* Tăng từ 30px */
+    background: linear-gradient(180deg, #FFFACD 0%, #F5DEB3 100%);
+    border-radius: 6px;
+    position: relative;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    border: 1px solid #DDD;
+}
+
+.flame {
+    position: absolute;
+    top: -25px; /* Tăng từ -15px */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px; /* Tăng từ 12px */
+    height: 25px; /* Tăng từ 15px */
+    background: radial-gradient(
+        ellipse at center bottom,
+        #FFD700 0%,
+        #FFA500 30%,
+        #FF6347 60%,
+        #FF4500 80%,
+        #DC143C 100%
+    );
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: megaFlicker 1.5s ease-in-out infinite alternate;
+    box-shadow: 
+        0 0 10px rgba(255, 165, 0, 0.8),
+        0 0 20px rgba(255, 69, 0, 0.6),
+        0 0 30px rgba(255, 69, 0, 0.4);
+    filter: drop-shadow(0 0 5px rgba(255, 165, 0, 0.7));
+}
+
+/* Thêm hiệu ứng inner glow cho ngọn lửa */
+.flame::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: radial-gradient(
+        ellipse at center bottom,
+        #FFFF99 0%,
+        #FFD700 40%,
+        transparent 70%
+    );
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    opacity: 0.8;
+}
+
+/* Thêm particles xung quanh ngọn lửa */
+.flame::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: radial-gradient(
+        circle at 30% 70%,
+        rgba(255, 215, 0, 0.3) 0%,
+        transparent 20%
+    ),
+    radial-gradient(
+        circle at 70% 60%,
+        rgba(255, 69, 0, 0.2) 0%,
+        transparent 15%
+    ),
+    radial-gradient(
+        circle at 50% 30%,
+        rgba(255, 255, 0, 0.4) 0%,
+        transparent 10%
+    );
+    border-radius: 50%;
+    animation: flameParticles 2s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* Animation mới cho ngọn lửa */
+@keyframes megaFlicker {
+    0% { 
+        transform: translateX(-50%) scale(1) rotate(-3deg);
+        opacity: 1;
+    }
+    25% {
+        transform: translateX(-50%) scale(1.1) rotate(2deg);
+        opacity: 0.9;
+    }
+    50% {
+        transform: translateX(-50%) scale(0.95) rotate(-1deg);
+        opacity: 1;
+    }
+    75% {
+        transform: translateX(-50%) scale(1.15) rotate(3deg);
+        opacity: 0.85;
+    }
+    100% { 
+        transform: translateX(-50%) scale(1.05) rotate(-2deg);
+        opacity: 0.95;
+    }
+}
+
+@keyframes flameParticles {
+    0%, 100% {
+        opacity: 0.6;
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1) rotate(180deg);
+    }
+}
+
+/* Hiệu ứng khi thổi nến */
+.flame.blown-out {
+    animation: megaBlowOut 0.8s ease-out forwards;
+}
+
+@keyframes megaBlowOut {
+    0% { 
+        opacity: 1; 
+        transform: translateX(-50%) scale(1) rotate(0deg);
+        filter: drop-shadow(0 0 5px rgba(255, 165, 0, 0.7));
+    }
+    30% {
+        opacity: 0.7;
+        transform: translateX(-50%) scale(1.3) rotate(45deg);
+        filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.5));
+    }
+    60% {
+        opacity: 0.3;
+        transform: translateX(-50%) scale(0.5) rotate(90deg);
+        filter: drop-shadow(0 0 15px rgba(100, 100, 100, 0.3));
+    }
+    100% { 
+        opacity: 0; 
+        transform: translateX(-50%) scale(0.1) rotate(180deg);
+        filter: drop-shadow(0 0 0px transparent);
+    }
+}
+
+/* Thêm hiệu ứng cho nến khi có gió */
+.candle:hover .flame {
+    animation: windEffect 0.5s ease-in-out;
+}
+
+@keyframes windEffect {
+    0%, 100% {
+        transform: translateX(-50%) scale(1) rotate(0deg);
+    }
+    50% {
+        transform: translateX(-50%) scale(1.2) rotate(15deg);
+    }
+}
+
+/* Responsive cho nến và ngọn lửa */
+@media (max-width: 768px) {
+    .candle {
+        width: 10px;
+        height: 30px;
+    }
+    
+    .flame {
+        width: 16px;
+        height: 20px;
+        top: -20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .candle {
+        width: 8px;
+        height: 25px;
+    }
+    
+    .flame {
+        width: 14px;
+        height: 18px;
+        top: -18px;
+    }
+}
+
+/* Wishes Styles */
+.wish-display {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 182, 193, 0.2);
+    margin: 20px 0;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Photo Carousel */
+.photo-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.photo-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-mint));
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 20px;
+}
+
+.carousel-image {
+    max-width: 400px; /* Giới hạn kích thước ảnh */
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Giữ tỷ lệ ảnh */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.carousel-image:hover {
+    transform: scale(1.05);
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 25px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.photo-caption h5 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.photo-caption p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    background: rgba(255, 105, 180, 0.8);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: rgba(255, 105, 180, 1);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-control-prev {
+    left: 15px;
+}
+
+.carousel-control-next {
+    right: 15px;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+    bottom: -50px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--primary-pink);
+    border: none;
+    margin: 0 5px;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators button.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Slide Animation */
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item-next:not(.carousel-item-start),
+.active.carousel-item-end {
+    transform: translateX(100%);
+}
+
+.carousel-item-prev:not(.carousel-item-end),
+.active.carousel-item-start {
+    transform: translateX(-100%);
+}
+
+/* Responsive Design cho ảnh */
+@media (max-width: 768px) {
+    .photo-container {
+        height: 400px;
+        margin: 0 10px;
+    }
+    
+    .carousel-image {
+        max-width: 300px;
+        max-height: 300px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .photo-caption {
+        padding: 10px 15px;
+        bottom: 10px;
+    }
+    
+    .photo-caption h5 {
+        font-size: 1rem;
+    }
+    
+    .photo-caption p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-image {
+        max-width: 250px;
+        max-height: 250px;
+    }
+    
+    .photo-container {
+        height: 350px;
+    }
+}
+
+/* Animation cho ảnh khi load */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.carousel-item.active .carousel-image {
+    animation: fadeInScale 0.8s ease-out;
+}
+
+/* Thêm hiệu ứng gradient overlay */
+.photo-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+        rgba(255, 105, 180, 0.1) 0%, 
+        rgba(135, 206, 235, 0.1) 50%, 
+        rgba(255, 215, 0, 0.1) 100%);
+    pointer-events: none;
+    border-radius: 15px;
+}
+
+/* Game Styles */
+.game-area {
+    background: var(--card-bg-light);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px 0;
+}
+
+.score-display {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.game-container {
+    min-height: 200px;
+    position: relative;
+    border: 3px dashed var(--secondary-color);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-balloon {
+    position: absolute;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    animation: gameBalloonFloat 3s linear;
+}
+
+.game-balloon:hover {
+    transform: scale(1.2);
+}
+
+@keyframes gameBalloonFloat {
+    from { 
+        bottom: -50px; 
+        opacity: 1; 
+    }
+    to { 
+        bottom: 250px; 
+        opacity: 0; 
+    }
+}
+
+/* Guest Wishes */
+.wish-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.wish-item {
+    background: rgba(255, 182, 193, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.wish-author {
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+/* Share Buttons */
+.share-buttons {
+    margin: 20px 0;
+}
+
+.share-buttons button {
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.share-buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .birthday-title {
+        font-size: 2.5rem;
+    }
+    
+    .name-title {
+        font-size: 1.8rem;
+    }
+    
+    .countdown-display {
+        gap: 10px;
+    }
+    
+    .time-unit {
+        padding: 10px;
+        min-width: 60px;
+    }
+    
+    .time-unit span {
+        font-size: 1.5rem;
+    }
+    
+    .cake {
+        width: 150px;
+        height: 120px;
+    }
+    
+    .layer-1 {
+        width: 140px;
+        height: 50px;
+    }
+    
+    .layer-2 {
+        width: 110px;
+        height: 40px;
+        bottom: 40px;
+    }
+    
+    .layer-3 {
+        width: 80px;
+        height: 30px;
+        bottom: 70px;
+    }
+    
+    .balloon {
+        font-size: 1.5rem;
+    }
+    
+    .birthday-emoji {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-container {
+        padding: 10px 0;
+    }
+    
+    .countdown-display {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .time-unit {
+        margin: 5px 0;
+    }
+    
+    .share-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .share-buttons button {
+        width: 200px;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
